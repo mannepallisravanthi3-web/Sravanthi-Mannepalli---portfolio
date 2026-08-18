@@ -1,0 +1,1214 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SMOOTH SCROLL
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #fff5f6;
+
+    color: #555;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+
+    background-color: #c96f8b;
+
+    padding: 20px 8%;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+nav {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.logo {
+
+    color: white;
+
+    font-size: 32px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.logo:hover {
+
+    transform: scale(1.05);
+}
+
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 28px;
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* Navigation underline */
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    left: 0;
+
+    bottom: -6px;
+
+    background-color: white;
+
+    transition:
+        width 0.3s ease;
+}
+
+
+nav a:hover {
+
+    color: #ffe6ed;
+}
+
+
+nav a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+section {
+
+    min-height: 80vh;
+
+    padding: 100px 8%;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+section.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.section-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+.section-label {
+
+    color: #c96f8b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+section h2 {
+
+    font-size: 42px;
+
+    color: #5a4146;
+
+    margin-bottom: 40px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+
+section h2:hover {
+
+    transform: translateX(8px);
+
+    color: #c96f8b;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+#home {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f6,
+            #fce9ee,
+            #f5eef8
+        );
+}
+
+
+.home-content {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================
+   HOME TEXT
+========================================= */
+
+.home-text {
+
+    flex: 1;
+
+    animation:
+        slideFromLeft 1s ease;
+}
+
+
+.hello {
+
+    color: #c96f8b;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    margin-bottom: 10px;
+}
+
+
+.home-text h1 {
+
+    font-size: 60px;
+
+    line-height: 1.1;
+
+    color: #4a3f42;
+
+    margin-bottom: 15px;
+}
+
+
+.home-text h2 {
+
+    font-size: 30px;
+
+    color: #c96f8b;
+
+    margin-bottom: 20px;
+}
+
+
+.intro {
+
+    max-width: 570px;
+
+    font-size: 19px;
+
+    color: #6f5961;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   HOME BUTTONS
+========================================= */
+
+.home-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+}
+
+
+.main-button,
+.outline-button {
+
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.main-button {
+
+    background-color: #c96f8b;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(
+            201,
+            111,
+            139,
+            0.2
+        );
+}
+
+
+.main-button:hover {
+
+    background-color: #a95770;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(
+            201,
+            111,
+            139,
+            0.3
+        );
+}
+
+
+.outline-button {
+
+    border: 2px solid #c96f8b;
+
+    color: #c96f8b;
+
+    background-color: transparent;
+}
+
+
+.outline-button:hover {
+
+    background-color: #c96f8b;
+
+    color: white;
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.home-image {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    animation:
+        slideFromRight 1s ease;
+}
+
+
+.image-frame {
+
+    width: 380px;
+
+    height: 480px;
+
+    padding: 8px;
+
+    border-radius: 190px 190px 35px 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c96f8b,
+            #d8bdca,
+            #c9bddb
+        );
+
+    box-shadow:
+        0 25px 50px rgba(
+            180,
+            120,
+            140,
+            0.25
+        );
+
+    animation:
+        floatImage 4s ease-in-out infinite;
+}
+
+
+.image-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius:
+        185px 185px 28px 28px;
+
+    border:
+        6px solid #fff5f6;
+
+    display: block;
+}
+
+
+/* =========================================
+   PHOTO DECORATIONS
+========================================= */
+
+.small-decoration {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 70px;
+
+    font-size: 35px;
+
+    color: #c96f8b;
+
+    animation:
+        sparkle 2s ease-in-out infinite;
+}
+
+
+.small-heart {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50px;
+
+    font-size: 45px;
+
+    color: #c96f8b;
+
+    animation:
+        heartBeat 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   HOME ANIMATIONS
+========================================= */
+
+@keyframes slideFromLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-60px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+@keyframes slideFromRight {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(60px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+@keyframes floatImage {
+
+    0% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity: 0.7;
+    }
+
+    50% {
+
+        transform:
+            scale(1.25);
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.15);
+    }
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+#about {
+
+    background-color: #fff5f6;
+}
+
+
+.about-content {
+
+    display: flex;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.about-text {
+
+    flex: 1;
+
+    font-size: 17px;
+}
+
+
+.about-text p {
+
+    margin-bottom: 18px;
+}
+
+
+.about-card {
+
+    flex: 0.8;
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 35px rgba(
+            150,
+            100,
+            120,
+            0.1
+        );
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.about-card:hover {
+
+    transform:
+        translateY(-8px);
+}
+
+
+.about-card span {
+
+    font-size: 35px;
+}
+
+
+.about-card h3 {
+
+    color: #5a4146;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+#skills {
+
+    background-color: #f5eef8;
+}
+
+
+.skills-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.skill-card {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(
+            100,
+            80,
+            100,
+            0.08
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.skill-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(
+            100,
+            80,
+            100,
+            0.15
+        );
+}
+
+
+.skill-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+.skill-card h3 {
+
+    color: #5a4146;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+#projects {
+
+    background-color: #fff1ec;
+}
+
+
+.projects-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.project-card {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(
+            150,
+            100,
+            100,
+            0.15
+        );
+}
+
+
+.project-number {
+
+    color: #c96f8b;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.project-card h3 {
+
+    color: #5a4146;
+
+    font-size: 22px;
+
+    margin: 15px 0;
+}
+
+
+.tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+.tags span {
+
+    background-color: #fce9ee;
+
+    color: #a95770;
+
+    padding: 5px 10px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   EXPERIENCE
+========================================= */
+
+#experience {
+
+    background-color: #eef5ef;
+}
+
+
+.timeline {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+
+    top: 0;
+
+    width: 2px;
+
+    height: 100%;
+
+    background-color: #c96f8b;
+}
+
+
+.timeline-item {
+
+    position: relative;
+
+    padding-left: 45px;
+
+    margin-bottom: 40px;
+}
+
+
+.timeline-dot {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 5px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background-color: #c96f8b;
+
+    border: 4px solid #eef5ef;
+}
+
+
+.timeline-content {
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(
+            80,
+            100,
+            80,
+            0.08
+        );
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.timeline-content:hover {
+
+    transform:
+        translateX(8px);
+}
+
+
+.timeline-content span {
+
+    color: #c96f8b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.timeline-content h3 {
+
+    color: #5a4146;
+
+    margin: 8px 0;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact {
+
+    min-height: 70vh;
+
+    background-color: #fce9ee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.contact-container {
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.contact-container h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+
+.contact-container h2 span {
+
+    color: #c96f8b;
+}
+
+
+.contact-container > p {
+
+    margin-bottom: 30px;
+
+    font-size: 18px;
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background-color: #5a4146;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .home-content {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+    }
+
+
+    .home-text {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .home-image {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .skills-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .projects-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .about-content {
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding: 15px 5%;
+
+    }
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+
+    nav a {
+
+        font-size: 14px;
+
+    }
+
+
+    #home {
+
+        padding:
+            70px 5%;
+
+    }
+
+
+    .home-text h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .home-text h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .image-frame {
+
+        width: 280px;
+
+        height: 360px;
+
+    }
+
+
+    .skills-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    section h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .contact-container h2 {
+
+        font-size: 35px;
+
+    }
+
+
+    .contact-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+}
